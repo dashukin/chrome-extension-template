@@ -48,3 +48,8 @@ fabric.properties
 jshint.xml
 
 .idea/
+.idea/chrome-extension-template.iml
+.idea/copyright/
+.idea/misc.xml
+.idea/modules.xml
+build/
