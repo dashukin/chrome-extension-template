@@ -1,1 +1,1 @@
-# chrome-extension
+# chrome-extension-template
