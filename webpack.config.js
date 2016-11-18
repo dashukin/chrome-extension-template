@@ -13,7 +13,7 @@ module.exports = {
 		popup: './src/app/js/popup'
 	},
 	output: {
-		filename: '[name].bundle.js'
+		filename: '[name].js'
 	},
 	module: {
 		loaders: [{
