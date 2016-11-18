@@ -52,7 +52,7 @@ jshint.xml
 .idea/copyright/
 .idea/misc.xml
 .idea/modules.xml
-build/
+build/*
 
 
 node_modules
