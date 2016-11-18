@@ -99,11 +99,12 @@
 	// https://developer.chrome.com/extensions/content_scripts
 	"content_scripts": [
 		{
-			// "matches": ["http://www.example.com/*"]
+			// https://developer.chrome.com/extensions/match_patterns
+			// "matches": ["<all_urls>"]
 			// "exclude_matches": []
 			// "match_about_blank": false
 			// "css": ["mystyles.css"]
-			// "js": ["myscript.js"]
+			"js": ["contentscript.js"]
 			// "run_at": "document_idle" // document_idle, document_start, document_end
 			// "all_frames": false
 			// "include_globs": []
