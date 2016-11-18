@@ -53,3 +53,7 @@ jshint.xml
 .idea/misc.xml
 .idea/modules.xml
 build/
+
+
+node_modules
+npm-debug.log
