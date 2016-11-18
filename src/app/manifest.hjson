@@ -12,7 +12,7 @@
 	"name": "Chrome extension template"
 
 	// https://developer.chrome.com/extensions/manifest/version
-	"version": "versionString"
+	"version": "0.0.1"
 
 	// Recommended
 
