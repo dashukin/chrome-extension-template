@@ -4,7 +4,7 @@
   "description": "Chrome extension base template",
   "main": "index.js",
   "scripts": {
-    "start": "gulp start-dev",
+    "dev": "gulp start-dev",
     "build": "gulp build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

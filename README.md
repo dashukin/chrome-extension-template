@@ -16,5 +16,5 @@ Features:
 3. Run "npm install" to get all dependencies.
 4. Modify manifest.hjson file according to your extension requirements.
 5. Add logic to javascript files that you're going to use.
-6. Run "npm start" to automatically run build process when any of files is changed.
+6. Run "npm run dev" to automatically run build process when any of files is changed.
 7. Run "npm run build" to create application build with ZIP archive ready to be uploaded to chrome webstore.
