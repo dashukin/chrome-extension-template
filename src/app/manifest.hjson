@@ -25,18 +25,18 @@
 
 	// https://developer.chrome.com/extensions/manifest/icons
 	"icons": {
- 		"16": "_icons/app-icon16.png"
-		"48": "_icons/app-icon48.png"
-		"128": "_icons/app-icon128.png"
+ 		"16": "icons/app-icon16.png"
+		"48": "icons/app-icon48.png"
+		"128": "icons/app-icon128.png"
 	}
 
 	// Pick one (or none)
 	// https://developer.chrome.com/extensions/browserAction
 	"browser_action": {
 		"default_icon": {							// optional
-			"16": "_icons/action-icon16.png"		// optional
-			"24": "_icons/action-icon24.png"		// optional
-			"32": "_icons/action-icon32.png"		// optional
+			"16": "icons/action-icon16.png"		// optional
+			"24": "icons/action-icon24.png"		// optional
+			"32": "icons/action-icon32.png"		// optional
 		},
 		"default_title": "Browser action title."	// optional; shown in tooltip
 		"default_popup": "popup.html"				// optional
@@ -61,7 +61,7 @@
 
 	// https://developer.chrome.com/extensions/background_pages
 	"background": {
-		"scripts": ["eventPage.js"]
+		"scripts": ["js/eventPage.js"]
 		// Recommended
 		// https://developer.chrome.com/extensions/event_pages
 		"persistent": false
@@ -70,28 +70,22 @@
 	}
 
 	// https://developer.chrome.com/extensions/settings_override
-	"chrome_settings_overrides": {
-
-	}
+	// "chrome_settings_overrides": {}
 
 	// https://developer.chrome.com/extensions/ui_override
-	"chrome_ui_overrides": {
+	// "chrome_ui_overrides": {
 		// "bookmarks_ui": {
 		//	"remove_bookmark_shortcut": true,
 		//	"remove_button": true
 		// }
-	}
+	// }
 
 	// https://developer.chrome.com/extensions/override
-	"chrome_url_overrides": {
-
-	}
+	// "chrome_url_overrides": {}
 
 	// Use the commands API to add keyboard shortcuts that trigger actions in your extension,
 	// for example, an action to open the browser action or send a command to the extension.
-	"commands": {
-
-	}
+	// "commands": {}
 
 	// TODO: get description url
 	// "content_capabilities": ''
@@ -100,11 +94,11 @@
 	"content_scripts": [
 		{
 			// https://developer.chrome.com/extensions/match_patterns
-			// "matches": ["<all_urls>"]
+			"matches": ["<all_urls>"]
 			// "exclude_matches": []
 			// "match_about_blank": false
-			// "css": ["mystyles.css"]
-			"js": ["contentscript.js"]
+			"css": ["css/contentstyles.css"]
+			"js": ["js/contentscript.js"]
 			// "run_at": "document_idle" // document_idle, document_start, document_end
 			// "all_frames": false
 			// "include_globs": []
@@ -125,20 +119,18 @@
 	// "devtools_page": "devtools.html"
 
 	// https://developer.chrome.com/extensions/manifest/event_rules
-	"event_rules": [{
-
-	}]
+	// "event_rules": [{}]
 
 	// https://developer.chrome.com/extensions/manifest/externally_connectable
 	// The externally_connectable manifest property declares which extensions, apps, and web pages can connect to your extension
-	"externally_connectable": {
+	// "externally_connectable": {
 		// ids: []
 		// "matches": []
 		// "accepts_tls_channel_id": false
-	}
+	// }
 
 	// https://developer.chrome.com/extensions/fileBrowserHandler
-	"file_browser_handlers": []
+	// "file_browser_handlers": []
 
 	// https://developer.chrome.com/extensions/fileSystemProvider
 	// "file_system_provider_capabilities": {
@@ -151,8 +143,8 @@
 	// "homepage_url": ""
 
 	// https://developer.chrome.com/extensions/shared_modules
-	"export": []
-	"import": []
+	// "export": []
+	// "import": []
 
 	// https://developer.chrome.com/extensions/manifest/incognito
 	"incognito": "spanning" // spanning, split, not_allowed
@@ -160,16 +152,16 @@
 	// https://developer.chrome.com/extensions/input_ime
 	// https://cs.chromium.org/search/?q=file:extensions+input_components&sq=package:chromium
 	// https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/docs/examples/api/input.ime/basic
-	"input_components": ""
+	// "input_components": ""
 
 	// https://developer.chrome.com/extensions/manifest/key
-	"key": ""
+	// "key": ""
 
 	// https://developer.chrome.com/extensions/manifest/minimum_chrome_version
-	"minimum_chrome_version": ""
+	// "minimum_chrome_version": ""
 
 	// https://developer.chrome.com/extensions/manifest/nacl_modules
-	"nacl_modules": []
+	// "nacl_modules": []
 
 	// https://developer.chrome.com/apps/app_identity
 	// "oauth2": ''
@@ -178,13 +170,13 @@
 	"offline_enabled": true
 
 	// https://developer.chrome.com/extensions/omnibox
-	"omnibox": {
+	// "omnibox": {
 		// "keyword": ""
-	}
+	// }
 
 	// https://developer.chrome.com/extensions/permissions
 	// https://developer.chrome.com/extensions/declare_permissions
-	"optional_permissions": []
+	// "optional_permissions": []
 
 	// https://developer.chrome.com/extensions/options
 	// "options_page": "options.html"
@@ -275,7 +267,7 @@
 	// "requirements": {}
 
 	// https://developer.chrome.com/extensions/manifest/sandbox
-	"sandbox": []
+	// "sandbox": []
 
 	// https://developer.chrome.com/extensions/manifest/name#short_name
 	// maximum of 12 characters
@@ -303,7 +295,7 @@
 	}
 
 	// https://developer.chrome.com/extensions/autoupdate
-	"update_url": ""
+	// "update_url": ""
 
 	// https://developer.chrome.com/extensions/manifest/version
 	// "version_name": ""
