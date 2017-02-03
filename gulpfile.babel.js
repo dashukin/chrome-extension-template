@@ -61,8 +61,12 @@ gulp.task('watch-scss', () => {
 });
 
 gulp.task('build-js:dev', () => {
+
+	let devConfig = Object.create(webpackConfig);
+	devConfig.watch = true;
+
 	return gulp.src(jsSrcPath)
-		.pipe(gulpWebpack(webpackConfig))
+		.pipe(gulpWebpack(devConfig))
 		.pipe(gulp.dest(jsBuildPath));
 });
 
