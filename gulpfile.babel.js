@@ -61,12 +61,18 @@ gulp.task('watch-scss', () => {
 });
 
 gulp.task('build-js:dev', () => {
+	return gulp.src(jsSrcPath)
+		.pipe(gulpWebpack(webpackConfig))
+		.pipe(gulp.dest(jsBuildPath));
+});
 
-	let devConfig = Object.create(webpackConfig);
-	devConfig.watch = true;
+gulp.task('watch-js:dev', () => {
+
+	let devWatchConfig = Object.create(webpackConfig);
+	devWatchConfig.watch = true;
 
 	return gulp.src(jsSrcPath)
-		.pipe(gulpWebpack(devConfig))
+		.pipe(gulpWebpack(devWatchConfig))
 		.pipe(gulp.dest(jsBuildPath));
 });
 
@@ -90,7 +96,7 @@ gulp.task('build-js:prod', () => {
 });
 
 gulp.task('watch-js', () => {
-	return gulp.watch(jsSrcPath, ['build-js:dev']);
+	return gulp.watch(jsSrcPath, ['watch-js:dev']);
 });
 
 gulp.task('zip', () => {
