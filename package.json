@@ -1,40 +1,46 @@
 {
-  "name": "chrome-extension-template",
-  "version": "0.0.1",
-  "description": "Chrome extension base template",
-  "main": "index.js",
-  "scripts": {
-    "dev": "gulp start-dev",
-    "build": "gulp build",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dashukin/chrome-extension-template.git"
-  },
-  "keywords": [
-    "chrome",
-    "extension",
-    "template"
-  ],
-  "author": "Vasili Molakhau",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/dashukin/chrome-extension-template/issues"
-  },
-  "homepage": "https://github.com/dashukin/chrome-extension-template#readme",
-  "devDependencies": {
-    "babel": "^6.5.2",
-    "babel-core": "^6.18.2",
-    "babel-loader": "^6.2.7",
-    "babel-preset-latest": "^6.16.0",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-hjson": "^2.0.3",
-    "gulp-sass": "^2.3.2",
-    "gulp-webpack": "^1.5.0",
-    "gulp-zip": "^3.2.0",
-    "run-sequence": "^1.2.2",
-    "webpack": "^1.13.3"
-  }
+    "name": "chrome-extension-template",
+    "version": "0.7.3",
+    "description": "Chrome extension base template",
+    "main": "index.js",
+    "scripts": {
+        "version:patch": "gulp update-version --patch",
+        "version:minor": "gulp update-version --minor",
+        "version:major": "gulp update-version --major",
+        "dev": "gulp start-dev",
+        "build": "gulp build",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dashukin/chrome-extension-template.git"
+    },
+    "keywords": [
+        "chrome",
+        "extension",
+        "template"
+    ],
+    "author": "Vasili Molakhau",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dashukin/chrome-extension-template/issues"
+    },
+    "homepage": "https://github.com/dashukin/chrome-extension-template#readme",
+    "devDependencies": {
+        "babel": "^6.5.2",
+        "babel-core": "^6.18.2",
+        "babel-loader": "^6.2.7",
+        "babel-preset-latest": "^6.16.0",
+        "del": "^2.2.2",
+        "fs-extra": "^2.0.0",
+        "gulp": "^3.9.1",
+        "gulp-hjson": "^2.0.3",
+        "gulp-sass": "^2.3.2",
+        "gulp-webpack": "^1.5.0",
+        "gulp-zip": "^3.2.0",
+        "hjson": "^2.4.1",
+        "run-sequence": "^1.2.2",
+        "webpack": "^1.13.3",
+        "yargs": "^6.6.0"
+    }
 }
