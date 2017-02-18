@@ -2,6 +2,8 @@
  * Chrome extension manifest file written with hjson syntax (http://hjson.org/)
  * Github: https://github.com/hjson/hjson-js/
  * Editors support: http://hjson.org/users.html#ed
+ * In order to prevent comments on different lines from being merged with each other -
+ * leave an empty line after any of properties that had been uncommented.
  */
 {
 	// https://developer.chrome.com/extensions/manifest/manifest_version
@@ -12,7 +14,7 @@
 	"name": "Chrome extension template"
 
 	// https://developer.chrome.com/extensions/manifest/version
-	"version": "0.7.3"
+	"version": "0.7.4"
 
 	// Recommended
 
@@ -67,8 +69,9 @@
 		]
 		// Recommended
 		// https://developer.chrome.com/extensions/event_pages
-		"persistent": false // Notice that without the "persistent" key, you have a regular background page.
-		// Persistence is what differentiates an event page from a background page.
+		// Notice that without the "persistent" key, you have a regular background page.
+        // Persistence is what differentiates an event page from a background page.
+		"persistent": false
 	}
 
 	// https://developer.chrome.com/extensions/settings_override
@@ -106,7 +109,10 @@
 			]
 			"js": [
 				"js/contentscript.js"
-			] // "run_at": "document_idle" // document_idle, document_start, document_end
+			]
+			// document_idle, document_start, document_end
+			"run_at": "document_idle"
+
 			// "all_frames": false
 			// "include_globs": []
 			// "exclude_globs": []
@@ -252,7 +258,8 @@
 		// "system.memory"
 		// "system.storage"
 		// "tabCapture"
-		// "tabs"
+		"tabs"
+
 		// "topSites"
 		// "tts"
 		// "ttsEngine"
