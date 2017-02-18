@@ -54,7 +54,7 @@ const hjsonConfig = {
 	keepWsc: true,
 	bracesSameLine: true,
 	quotes: 'all',
-	space: '	'
+	space: '\t'
 };
 
 
@@ -167,11 +167,11 @@ gulp.task('version', () => {
 
 	let manifestText = fsExtra.readFileSync(manifestSrcPath, encoding);
 
-	let manifestData = hjson.parse(manifestText, hjsonConfig);
+	let manifestData = hjson.rt.parse(manifestText, hjsonConfig);
 
 	manifestData.version = newVersion;
 
-	fsExtra.writeFileSync(manifestSrcPath, hjson.stringify(manifestData, hjsonConfig), encoding);
+	fsExtra.writeFileSync(manifestSrcPath, hjson.rt.stringify(manifestData, hjsonConfig), encoding);
 
 	console.log(`Version has been updated from ${version} to ${newVersion}`);
 })
