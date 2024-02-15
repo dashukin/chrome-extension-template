@@ -1,0 +1,148 @@
+/*
+ * Chrome extension manifest file written with hjson syntax (http://hjson.org/)
+ * Github: https://github.com/hjson/hjson-js/
+ * Editors support: http://hjson.org/users.html#ed
+ * In order to prevent comments on different lines from being merged with each other -
+ * leave an empty line after any of properties that had been uncommented.
+ */
+/*
+ * Manifest documentation: https://developer.chrome.com/docs/extensions/reference/manifest
+ */
+{
+    /* Keys required by the Extensions platform */
+
+	"manifest_version": 3,
+
+	// https://developer.chrome.com/extensions/manifest/name#name
+	// maximum of 45 characters
+	"name": "Chrome extension template",
+
+	// https://developer.chrome.com/extensions/manifest/version
+	"version": "1.0.0",
+
+	/* Keys required by Chrome Web Store */
+
+	// https://developer.chrome.com/extensions/manifest/description
+    // maximum of 132 characters
+    "description": "Chrome extension template structure",
+
+    // https://developer.chrome.com/extensions/manifest/icons
+    "icons": {
+        "16": "icons/app-icon16.png"
+        "48": "icons/app-icon48.png"
+        "128": "icons/app-icon128.png"
+    },
+
+	/* Optional keys */
+
+	// https://developer.chrome.com/docs/extensions/reference/api/action
+	"action": {
+        "default_icon": {                // optional
+            "16": "images/icon16.png",   // optional
+            "24": "images/icon24.png",   // optional
+            "32": "images/icon32.png"    // optional
+        },
+        "default_title": "Click Me",   // optional, shown in tooltip
+        "default_popup": "popup.html"  // optional
+    },
+
+    "author": "",
+
+    // https://developer.chrome.com/docs/extensions/develop/concepts/service-workers
+    "background": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/chrome-settings-override
+    "chrome_settings_overrides": {},
+
+    // https://developer.chrome.com/docs/extensions/develop/ui/override-chrome-pages
+    "chrome_url_overrides": {},
+
+    // https://developer.chrome.com/docs/extensions/reference/api/commands
+    "commands": {},
+
+    // https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts
+    "content_scripts": [],
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/content-security-policy
+    "content_security_policy": {},
+
+    "cross_origin_embedder_policy": "",
+
+    "cross_origin_opener_policy": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/api/declarativeNetRequest
+    "declarative_net_request": {},
+
+    // https://developer.chrome.com/docs/extensions/reference/api/i18n
+    "default_locale": "en",
+
+    // https://developer.chrome.com/docs/extensions/how-to/devtools/extend-devtools
+    "devtools_page": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/shared-modules#export
+    "export": {}
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/externally-connectable
+    "externally_connectable": {}
+
+    // https://developer.chrome.com/docs/extensions/how-to/distribute/host-extensions
+    "homepage_url": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/shared-modules#import
+    "import": [],
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/incognito
+    "incognito": "spanning"
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/key
+    "key": ""
+
+    "minimum_chrome_version": ""
+
+    // https://developer.chrome.com/docs/extensions/how-to/integrate/oauth
+    "oauth2": {}
+
+    // https://developer.chrome.com/docs/extensions/reference/api/omnibox
+    "omnibox": {}
+
+    // https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions
+    "optional_host_permissions": []
+
+    // https://developer.chrome.com/docs/extensions/reference/api/permissions#step-2-declare-optional-permissions-in-the-manifest
+    "optional_permissions": []
+
+    // https://developer.chrome.com/docs/extensions/develop/ui/options-page
+    "options_page": "",
+
+    // https://developer.chrome.com/docs/extensions/develop/ui/options-page#embedded_options
+    "options_ui": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/api/permissions
+    "permissions": [],
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/requirements
+    "requirements": {},
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/sandbox
+    "sandbox": {},
+
+    "short_name": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/api/sidePanel
+    "side_panel": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/storage
+    "storage": {},
+
+    // https://developer.chrome.com/docs/extensions/reference/api/ttsEngine
+    "tts_engine": {},
+
+    // https://developer.chrome.com/docs/extensions/how-to/distribute/host-extensions
+    "update_url": "",
+
+    "version_name": "",
+
+    // https://developer.chrome.com/docs/extensions/reference/manifest/web-accessible-resources
+    "web_accessible_resources": []
+
+}

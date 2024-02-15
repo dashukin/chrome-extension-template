@@ -1,0 +1,1 @@
+export {createShellPlugin} from './webpack.shell.plugin.js';
