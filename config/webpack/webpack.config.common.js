@@ -4,21 +4,24 @@ import {
   CONTENT_SCRIPT_SRC,
   BACKGROUND_SCRIPT_SRC,
   EXTENSION_DIST_DIR,
-  ICONS_SRC_DIR, ICONS_DIST_DIR,
-} from '../environment/environment.config.js'
+  ICONS_SRC_DIR,
+  ICONS_DIST_DIR,
+} from '../environment/environment.config.js';
 import {
   createTsCheckerPlugin,
   createCleanPlugin,
   createCopyPlugin,
-  createShellPlugin
-} from "./plugins/index.js";
-import {execSync} from "child_process";
+  createShellPlugin,
+  createExtractCSSChunksPlugin,
+} from './plugins/index.js';
+import { createStyleRules, createJSRules, createTypeScriptRules } from './rules/index.js';
+import { execSync } from 'child_process';
 
 export const webpackConfigCommon = {
   entry: {
     popup: POPUP_SCRIPT_SRC,
     content: CONTENT_SCRIPT_SRC,
-    background: BACKGROUND_SCRIPT_SRC
+    background: BACKGROUND_SCRIPT_SRC,
   },
   output: {
     path: EXTENSION_DIST_DIR,
@@ -29,40 +32,27 @@ export const webpackConfigCommon = {
     hotUpdateChunkFilename: 'hot/[id].[hash].hot-update.js',
   },
   module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        resolve: {
-          fullySpecified: false, // disable the behaviour
-        },
-      },
-      {
-        test: /\.tsx?$/,
-        use: [
-          {
-            loader: 'ts-loader',
-            options: {
-              transpileOnly: true,
-            },
-          },
-        ],
-      }
-    ]
+    rules: [createJSRules(), createTypeScriptRules(), createStyleRules()],
   },
   plugins: [
     createCleanPlugin(),
     createTsCheckerPlugin(),
+    createExtractCSSChunksPlugin(),
     createCopyPlugin({
-      patterns: [{
-        from: POPUP_HTML_SRC,
-        to: EXTENSION_DIST_DIR
-      }]
+      patterns: [
+        {
+          from: POPUP_HTML_SRC,
+          to: EXTENSION_DIST_DIR,
+        },
+      ],
     }),
     createCopyPlugin({
-      patterns: [{
-        from: ICONS_SRC_DIR,
-        to: ICONS_DIST_DIR
-      }]
+      patterns: [
+        {
+          from: ICONS_SRC_DIR,
+          to: ICONS_DIST_DIR,
+        },
+      ],
     }),
     createShellPlugin({
       onAfterDone: {
@@ -74,9 +64,9 @@ export const webpackConfigCommon = {
             }),
         ],
       },
-    })
+    }),
   ],
   resolve: {
     extensions: ['.js', '.mjs', '.ts', '.tsx'],
-  }
-}
+  },
+};
