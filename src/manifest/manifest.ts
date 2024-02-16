@@ -1,4 +1,4 @@
-import {version} from '../../package.json';
+import { version } from '../../package.json';
 
 export const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,
@@ -11,14 +11,16 @@ export const manifest: chrome.runtime.ManifestV3 = {
       32: './icons/action-icon32.png',
     },
     default_title: 'Example title',
-    default_popup: './popup.html'
+    default_popup: './popup.html',
   },
   background: {
     service_worker: './scripts/background.js',
   },
-  content_scripts: [{
-    matches: ['https://*/*'],
-    js: ['./scripts/content.js'],
-    world: 'MAIN'
-  }]
-}
+  content_scripts: [
+    {
+      matches: ['https://*/*'],
+      js: ['./scripts/content.js'],
+      world: 'ISOLATED',
+    },
+  ],
+};

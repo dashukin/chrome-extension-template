@@ -1,2 +1,1 @@
-// Popup script
-console.log('popup')
+import './popup.scss';
