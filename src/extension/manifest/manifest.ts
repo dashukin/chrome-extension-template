@@ -1,4 +1,4 @@
-import { version } from '../../package.json';
+import { version } from '../../../package.json';
 
 export const manifest: chrome.runtime.ManifestV3 = {
   manifest_version: 3,

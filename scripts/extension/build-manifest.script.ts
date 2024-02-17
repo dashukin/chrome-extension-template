@@ -1,11 +1,11 @@
 import fse from 'fs-extra';
-import {MANIFEST_DIST} from '../../config/environment/environment.config.js';
-import {manifest} from '../../src/manifest/manifest';
+import { MANIFEST_DIST } from '../../config/environment/environment.config.js';
+import { manifest } from '../../src/extension/manifest/manifest';
 
 const writeManifestFile = () => {
   fse.writeJSONSync(MANIFEST_DIST, manifest, {
-    encoding: 'utf8'
+    encoding: 'utf8',
   });
-}
+};
 
 writeManifestFile();
