@@ -6,7 +6,7 @@ const bridge: BridgeBackground = new BridgeBackground();
 
 bridge.addListener('TAB_CONNECT', ({ sender }) => {
   if (sender?.tab?.id != null) {
-    bridge.sendMessage('TAB_CONNECTED', { id: sender.tab.id });
+    bridge.sendMessage(sender.tab.id, 'TAB_CONNECTED', { id: sender.tab.id });
   }
 });
 

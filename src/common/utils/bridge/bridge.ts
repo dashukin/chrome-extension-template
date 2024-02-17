@@ -33,9 +33,13 @@ export abstract class BridgeBaseClient extends BridgeBase {
 
 export abstract class BridgeBaseBackground extends BridgeBase {
   /*
+   * Broadcast message to all connected ports
+   * */
+  broadcastMessage!: (type: EventType, payload?: any) => void;
+  /*
    * Send message to all connected tabs
    * */
-  sendMessage!: (type: EventType, payload?: any) => void;
+  sendMessage!: (tabId: number, type: EventType, payload?: any) => void;
 }
 
 export class Bridge implements BridgeBase {
