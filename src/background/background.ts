@@ -1,4 +1,4 @@
-import { BridgeBackground } from '../utils/bridge-background';
+import { BridgeBackground } from '../utils/bridge/bridge-background';
 
 console.info('background script inited');
 

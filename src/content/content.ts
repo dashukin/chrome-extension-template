@@ -1,4 +1,4 @@
-import { BridgeClient } from '../utils/bridge-client';
+import { BridgeClient } from '../utils/bridge/bridge-client';
 
 console.info('content script initialised');
 
