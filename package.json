@@ -65,5 +65,8 @@
     "webpack-merge": "^5.10.0",
     "webpack-shell-plugin-next": "^2.3.1"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
 }
